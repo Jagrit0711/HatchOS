@@ -1,0 +1,96 @@
+================================================================================
+                    🌐 HATCHOS - PUBLIC URL SETUP
+================================================================================
+
+Instead of using IP addresses, we'll use LOCALTUNNEL to create public HTTPS URLs
+that work from anywhere (even without same WiFi)!
+
+================================================================================
+                        STEP 1: START LOCALTUNNEL
+================================================================================
+
+You need to run these TWO batch files:
+
+1. Double-click: TUNNEL-FLASK.bat
+   → This creates a public URL for your Flask backend
+   → You'll see something like: "your url is: https://random-name.loca.lt"
+   → COPY THIS URL!
+
+2. Double-click: TUNNEL-EXPO.bat (in APPS\MessagingApp folder)
+   → This creates a public URL for your Expo frontend
+   → You'll see something like: "your url is: https://another-name.loca.lt"
+   → COPY THIS URL!
+
+================================================================================
+                        STEP 2: UPDATE API.JS
+================================================================================
+
+After you get the Flask tunnel URL, you need to update the code:
+
+1. Open: APPS\MessagingApp\src\services\api.js
+
+2. Change this line:
+   const SERVER_URL = 'http://192.168.0.3:5000';
+
+   To (use YOUR tunnel URL):
+   const SERVER_URL = 'https://your-flask-tunnel-url.loca.lt';
+
+3. Save the file
+
+4. Refresh your browser (Ctrl+Shift+R)
+
+================================================================================
+                        STEP 3: ACCESS YOUR APP
+================================================================================
+
+Open the EXPO tunnel URL on any device (phone, tablet, anywhere):
+
+https://your-expo-tunnel-url.loca.lt
+
+Then:
+1. You might see a warning page - click "Continue"
+2. Login with your credentials
+3. Tap 3-dots menu → "Add to Home screen"
+4. Install the PWA!
+
+================================================================================
+                        ✨ BENEFITS OF LOCALTUNNEL
+================================================================================
+
+✅ Works from ANYWHERE (not just same WiFi)
+✅ Real HTTPS URLs (full PWA features!)
+✅ Share with friends (they can access too!)
+✅ No firewall issues
+✅ Free to use!
+
+================================================================================
+                        ⚠️ IMPORTANT NOTES
+================================================================================
+
+📌 Keep ALL windows open:
+   - Flask server CMD window
+   - Expo server CMD window
+   - TUNNEL-FLASK.bat window
+   - TUNNEL-EXPO.bat window
+
+📌 URLs change each time:
+   - Each time you restart localtunnel, you get a new URL
+   - You'll need to update api.js with the new URL
+   - For permanent URLs, use ngrok paid plan or deploy to cloud
+
+📌 First visit warning:
+   - Localtunnel shows a warning page on first visit
+   - Click "Click to Continue" button
+   - This is normal and safe
+
+================================================================================
+                        🚀 QUICK START
+================================================================================
+
+1. Run TUNNEL-FLASK.bat → Copy the URL
+2. Run TUNNEL-EXPO.bat → Copy the URL  
+3. Update api.js with Flask tunnel URL
+4. Open Expo tunnel URL on your phone
+5. Install as PWA!
+
+================================================================================

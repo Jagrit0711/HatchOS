@@ -1,0 +1,18 @@
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#075E54" rx="64"/>
+  
+  <!-- WhatsApp-style chat bubble -->
+  <g transform="translate(256, 256)">
+    <!-- Main bubble -->
+    <path d="M -120,-60 L 120,-60 L 120,60 L 30,60 L -120,120 Z" fill="#25D366" stroke="#fff" stroke-width="8"/>
+    
+    <!-- Dots -->
+    <circle cx="-60" cy="0" r="15" fill="#fff"/>
+    <circle cx="0" cy="0" r="15" fill="#fff"/>
+    <circle cx="60" cy="0" r="15" fill="#fff"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="256" y="440" font-family="Arial, sans-serif" font-size="54" font-weight="bold" fill="#fff" text-anchor="middle">HATCHOS</text>
+</svg>

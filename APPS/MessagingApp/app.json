@@ -1,0 +1,68 @@
+{
+  "expo": {
+    "name": "HatchOS Messaging",
+    "slug": "hatchos-messaging",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "androidStatusBar": {
+      "backgroundColor": "#075E54",
+      "barStyle": "light-content",
+      "translucent": false
+    },
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#075E54"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hatchos.messaging"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.hatchos.messaging",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "RECORD_AUDIO",
+        "DETECT_SCREEN_CAPTURE"
+      ],
+      "statusBar": {
+        "backgroundColor": "#075E54",
+        "barStyle": "light-content",
+        "translucent": false
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "name": "HatchOS Messaging",
+      "shortName": "Messaging",
+      "description": "HatchOS Messaging - Real-time chat application",
+      "lang": "en",
+      "scope": "/",
+      "startUrl": "/",
+      "display": "standalone",
+      "orientation": "portrait",
+      "themeColor": "#075E54",
+      "backgroundColor": "#075E54",
+      "preferRelatedApplications": false,
+      "dangerous": {
+        "noServiceWorker": false
+      },
+      "manifest": {
+        "prefer_related_applications": false,
+        "categories": ["social", "communication"]
+      }
+    }
+  }
+}

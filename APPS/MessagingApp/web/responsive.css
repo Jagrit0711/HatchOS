@@ -1,0 +1,121 @@
+/* Web-specific CSS for responsive design */
+
+/* Global responsive settings */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Small devices (320x480 - student devices) */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  
+  .message-bubble {
+    max-width: 85%;
+  }
+  
+  .input-field {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Medium devices (tablets - teacher devices) */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+  
+  .message-bubble {
+    max-width: 70%;
+  }
+  
+  .avatar {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Large devices (desktop) */
+@media screen and (min-width: 1025px) {
+  body {
+    font-size: 16px;
+  }
+  
+  .app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .message-bubble {
+    max-width: 60%;
+  }
+  
+  .avatar {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Touch-friendly targets */
+.touchable {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Prevent text selection on buttons */
+button, .button {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar but keep functionality */
+.chat-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.chat-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Landscape orientation adjustments */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  .header {
+    min-height: 40px;
+  }
+  
+  .input-container {
+    padding: 4px;
+  }
+}
