@@ -1,0 +1,82 @@
+===============================================
+    ✅ SERVERS ARE RUNNING PERFECTLY!
+===============================================
+
+Backend: https://192.168.29.164:5000 (Flask HTTPS) ✅
+Frontend: http://192.168.29.164:19006 (Expo HTTP) ✅
+
+
+===============================================
+     ⚠️ WHY BLACK SCREEN?
+===============================================
+
+You haven't accepted the HTTPS certificate yet!
+
+The app is trying to connect to:
+  https://192.168.29.164:5000
+
+But your browser blocks it because the certificate
+is not trusted yet.
+
+
+===============================================
+     🔧 FIX IT NOW (2 STEPS):
+===============================================
+
+STEP 1: Accept Certificate
+---------------------------
+A Chrome tab just opened with:
+  https://192.168.29.164:5000/api/users
+
+You'll see RED WARNING: "Your connection is not private"
+
+🔑 DO THIS:
+   - Type on keyboard: thisisunsafe
+   - Don't click anything, just type it
+   - ✅ Page loads showing JSON users list!
+
+
+STEP 2: Reload Your App
+---------------------------
+1. Go back to app tab: http://192.168.29.164:19006
+
+2. Press Ctrl+Shift+R (hard refresh)
+
+3. ✅ App loads! No more black screen!
+
+4. Login should work now!
+
+
+===============================================
+     📱 IF STILL BLACK:
+===============================================
+
+1. Press F12 in app tab
+2. Click "Console" tab
+3. Look for red errors
+4. If you see "Mixed Content" warning:
+   - This is because frontend is HTTP, backend is HTTPS
+   - Some browsers block this
+   
+   SOLUTION: Clear cache and hard refresh
+   - F12 → Application → Clear storage → Clear site data
+   - Ctrl+Shift+R
+
+
+===============================================
+     ✨ AFTER IT WORKS:
+===============================================
+
+To install PWA:
+1. Chrome menu (3 dots)
+2. "Install HatchOS Messaging"
+3. Click Install
+4. ✅ Desktop app!
+
+
+===============================================
+
+START NOW:
+Type "thisisunsafe" in the Chrome tab that just opened!
+
+===============================================

@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "@capacitor/android": "^7.4.4",
+    "@capacitor/browser": "^7.0.2",
+    "@capacitor/core": "^7.4.4",
+    "@react-native-community/cli-server-api": "^20.0.2",
+    "cors": "^2.8.5",
+    "expo": "^54.0.12",
+    "express": "^5.1.0",
+    "http-proxy-middleware": "^3.0.5",
+    "metro-cache": "^0.76.0",
+    "react-native-image-viewing": "^0.2.2",
+    "react-native-safe-area-context": "^5.6.1",
+    "react-native-svg": "^15.14.0",
+    "react-native-vector-icons": "^10.3.0",
+    "react-native-web": "^0.21.2"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "vite-plugin-pwa": "^1.1.0"
+  }
+}

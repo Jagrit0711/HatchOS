@@ -1,0 +1,72 @@
+==============================================
+  ✅ FLASK SERVER IS RUNNING!
+==============================================
+
+Backend: https://192.168.29.164:5000 (HTTPS) ✅
+
+
+==============================================
+  📋 FOLLOW THESE STEPS NOW:
+==============================================
+
+STEP 1: Accept Backend Certificate
+-----------------------------------
+1. Open Chrome browser
+2. Visit: https://192.168.29.164:5000
+3. You'll see RED warning "Your connection is not private"
+4. Type on keyboard: thisisunsafe
+   (Just type it - don't click anything)
+5. ✅ Page loads showing JSON data!
+
+
+STEP 2: Start Frontend Server
+-----------------------------------
+Run this command in a NEW terminal:
+
+cd C:\Users\jagri\OneDrive\Documents\HatchOS\APPS\MessagingApp
+npx expo start --web --host lan --port 19006 --https --clear
+
+
+STEP 3: Accept Frontend Certificate
+-----------------------------------
+1. After Expo starts, visit: https://192.168.29.164:19006
+2. Type again: thisisunsafe
+3. ✅ App loads!
+
+
+STEP 4: Install PWA
+-----------------------------------
+1. In Chrome, click the 3-dot menu (top right)
+2. Look for "Install HatchOS Messaging"
+3. Click it
+4. ✅ App installed on desktop!
+
+
+ON PHONE:
+-----------------------------------
+1. Open Chrome on phone (same WiFi)
+2. Visit: https://192.168.29.164:5000
+   - Type: thisisunsafe (or tap Advanced → Proceed)
+3. Visit: https://192.168.29.164:19006
+   - Accept certificate again
+4. Chrome menu → "Add to Home screen"
+5. ✅ PWA installed! Opens as standalone app!
+
+
+==============================================
+  🔥 QUICK START:
+==============================================
+
+1. Visit: https://192.168.29.164:5000
+   Type: thisisunsafe
+
+2. Open NEW terminal and run:
+   cd APPS\MessagingApp
+   npx expo start --web --host lan --port 19006 --https --clear
+
+3. Visit: https://192.168.29.164:19006
+   Type: thisisunsafe
+
+4. Install from Chrome menu!
+
+==============================================

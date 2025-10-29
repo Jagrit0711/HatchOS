@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "6541ab2f-9361-4f69-9337-3fee20669ad7"
+      }
+    },
+    "android": {
+      "package": "com.zylonlabs.hatchosmessage"
+    }
+  }
+}
