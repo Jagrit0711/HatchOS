@@ -18,3 +18,9 @@ Due to the Diwali period in India, sourcing new hardware was extremely difficult
 ![IMG-20251013-WA0058](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6Njc3MiwicHVyIjoiYmxvYl9pZCJ9fQ==--9574baa22cdf8028b063c867b531eeb4bb43c7bc/IMG-20251013-WA0058.jpeg)![IMG-20251008-WA0068](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6Njc3MywicHVyIjoiYmxvYl9pZCJ9fQ==--4a33d517815474f6070217a3f95e996fd21e812f/IMG-20251008-WA0068.jpeg)
 h built-in AI filtering and logging, which worked perfectly.  
 
+## 10/31/2025 12:12 AM - Entry 3 — October 27, 2025  
+
+We showcased Hatch OS at a local hackathon, and the response was overwhelmingly positive. The judges and audience appreciated the concept and execution, and our team secured 2nd position. We were also given feedback to expand the ecosystem by building an admin app that can install applications remotely without physically touching the device. Within days, we built this functionality using Python and wireless debugging, completing the first working prototy![IMG_20251026_143814433](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6Njc3NSwicHVyIjoiYmxvYl9pZCJ9fQ==--35a6d979cf3480a929307d5d203d0dbd03ee3d6f/IMG_20251026_143814433.jpg)
+![IMG_20251026_143816863](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6Njc3NCwicHVyIjoiYmxvYl9pZCJ9fQ==--d62024d3c4f2d0bf56f0314dde9f38075605ca4f/IMG_20251026_143816863.jpg)
+pe of the Hatch ecosystem.  
+
