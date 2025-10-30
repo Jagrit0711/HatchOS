@@ -6,9 +6,15 @@
   ==================================================================
 -->
 
-## 10/31/2025 - Entry 1 October 10, 2025  
+## 10/31/2025 12:08 AM - Entry 1 October 10, 2025  
 
 We began the hardware setup phase and ordered our components from a vendor, including the Raspberry Pi 5, power adapter, cooler, case, and display. However, the vendor shipped a Pi 4 case instead of a Pi 5 case, and the screen provided was GPIO-based, which turned out incompatible with Android. Despite multiple attempts, we couldn’t get the display to work since Android didn’t support that interface. This caused a delay in testing the operating system and hardware integration.
 
 ![mj7mwqzw](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6Njc2NCwicHVyIjoiYmxvYl9pZCJ9fQ==--5b5fb5323ef2bc7ddc3a780d31bafeafb0417089/mj7mwqzw.png)  
+
+## 10/31/2025 12:11 AM - Entry 2 — October 18, 2025  
+
+Due to the Diwali period in India, sourcing new hardware was extremely difficult. After contacting multiple vendors, we finally received a working HDMI-based display after 12 days. During this waiting period, development continued on the software side. We started building the core Hatch OS apps using React to make future deployment easier on the device. We created the browser app, messaging app, and experimented with device monitoring using ADB and screenshot mirroring, but both approaches failed. Eventually, we developed our own browser wit![IMG-20251008-WA0075](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6Njc2NiwicHVyIjoiYmxvYl9pZCJ9fQ==--d633a3550947b88a8743e621df6678ac5be1f5d7/IMG-20251008-WA0075.jpeg)![IMG-20251008-WA0059](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6Njc2NywicHVyIjoiYmxvYl9pZCJ9fQ==--3e0d9fd89765e21fd980aed3ee45cb4d2bfc5d27/IMG-20251008-WA0059.jpeg)![IMG-20251008-WA0056](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6Njc3MSwicHVyIjoiYmxvYl9pZCJ9fQ==--cdd761650f91269f6c260fa143572ad5a9f778f5/IMG-20251008-WA0056.jpeg)![IMG-20251008-WA0071](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6Njc3MCwicHVyIjoiYmxvYl9pZCJ9fQ==--a82b25057df23b5fc5100193319a1ed3422dca51/IMG-20251008-WA0071.jpeg)![IMG-20251008-WA0065](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6Njc2OCwicHVyIjoiYmxvYl9pZCJ9fQ==--47c13ae9321b701e2220193b669a60c642d65dd8/IMG-20251008-WA0065.jpeg)![IMG-20251008-WA0062](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6Njc2OSwicHVyIjoiYmxvYl9pZCJ9fQ==--5cf2db3effca8911cd67a6ae34e32cbddb10a403/IMG-20251008-WA0062.jpeg)
+![IMG-20251013-WA0058](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6Njc3MiwicHVyIjoiYmxvYl9pZCJ9fQ==--9574baa22cdf8028b063c867b531eeb4bb43c7bc/IMG-20251013-WA0058.jpeg)![IMG-20251008-WA0068](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6Njc3MywicHVyIjoiYmxvYl9pZCJ9fQ==--4a33d517815474f6070217a3f95e996fd21e812f/IMG-20251008-WA0068.jpeg)
+h built-in AI filtering and logging, which worked perfectly.  
 
