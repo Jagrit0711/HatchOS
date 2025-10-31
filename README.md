@@ -1,6 +1,6 @@
 # HatchOS
 
-This README is an automated high-level summary of the repository and key files. Use the links to jump straight to places of interest.
+---
 
 ## Project snapshot
 - Main backend: [`server.py`](server.py)  
@@ -8,59 +8,175 @@ This README is an automated high-level summary of the repository and key files. 
 - Master apps index: [`APPS_OVERVIEW.md`](APPS_OVERVIEW.md)  
 - Cleanup / status docs: [`CLEANUP_SUMMARY.md`](CLEANUP_SUMMARY.md), [`FIXES_COMPLETE.md`](FIXES_COMPLETE.md)
 
-## Key apps (quick links)
-- Messaging app (Expo, PWA, native build helpers)
-  - Android fix notes: [`APPS/MessagingApp/ANDROID_FIX_README.md`](APPS/MessagingApp/ANDROID_FIX_README.md)  
-  - Build instructions: [`APPS/MessagingApp/BUILD_INSTRUCTIONS.md`](APPS/MessagingApp/BUILD_INSTRUCTIONS.md)  
-  - Studio build script: [`APPS/MessagingApp/BUILD-WITH-STUDIO.bat`](APPS/MessagingApp/BUILD-WITH-STUDIO.bat)  
-  - Web build script: [`APPS/MessagingApp/BUILD-WEB-APP.bat`](APPS/MessagingApp/BUILD-WEB-APP.bat)  
-  - PWA docs: [`APPS/MessagingApp/PWA_README.md`](APPS/MessagingApp/PWA_README.md)  
-  - Public/tunnel notes: [`APPS/MessagingApp/PUBLIC_URL_SETUP.txt`](APPS/MessagingApp/PUBLIC_URL_SETUP.txt)  
-  - Chat screen: [`APPS/MessagingApp/src/screens/ChatScreen.js`](APPS/MessagingApp/src/screens/ChatScreen.js)  
-  - Android gradle entry: [`APPS/MessagingApp/android/app/build.gradle`](APPS/MessagingApp/android/app/build.gradle)
+---
 
-- Hatch Wall (on-device firewall / AI detection)
-  - Main docs: [`APPS/HatchWall/README.md`](APPS/HatchWall/README.md)  
-  - Implementation summary: [`HATCH_WALL_COMPLETE.md`](HATCH_WALL_COMPLETE.md)  
-  - Quickstart: [`HATCH_WALL_QUICKSTART.md`](HATCH_WALL_QUICKSTART.md)  
-  - Firewall engine API usage example: see [`APPS/HatchWall/README.md`](APPS/HatchWall/README.md) and call patterns like [`FirewallEngine.initialize`](APPS/HatchWall/services/FirewallEngine.js) (service file path indicated in docs).  
-  - Admin dashboard generator: [`admin/dashboard.js`](admin/dashboard.js) and admin UI: [`admin/hatch-wall.html`](admin/hatch-wall.html)
+## Hardware Setup (Raspberry Pi & Router)
 
-- HatchOS Core / MyClass / other apps
-  - Core docs: [`APPS/HatchOSCore/README.md`](APPS/HatchOSCore/README.md)  
-  - MyClass main screens & seed data: [`APPS/MyClass/src/screens/HatchyScreen.js`](APPS/MyClass/src/screens/HatchyScreen.js), [`APPS/MyClass/seed_myclass.py`](APPS/MyClass/seed_myclass.py)  
-  - Shine Insight (web): [`APPS/hatch-shine-insight/src/pages/Index.tsx`](APPS/hatch-shine-insight/src/pages/Index.tsx), [`APPS/hatch-shine-insight/src/components/UploadSection.tsx`](APPS/hatch-shine-insight/src/components/UploadSection.tsx)
+### 1. Raspberry Pi Setup
+**Hardware used:**
+- Raspberry Pi 5 (8GB)
+- HDMI display (52Pi Touch)
+- Micro SD card (128GB)
+- Camera module (CSI)
+- PiDuino 27W Power Supply
+- Custom Router (ASUS NUC-based)
 
-## Lockfiles / binary blobs
-Many apps include bun lockfiles (binary):
-- [`APPS/hatchy-web-guard/bun.lockb`](APPS/hatchy-web-guard/bun.lockb)  
-- [`APPS/hatch-shine-insight/bun.lockb`](APPS/hatch-shine-insight/bun.lockb)  
-- [`APPS/hatch-smart-cal/bun.lockb`](APPS/hatch-smart-cal/bun.lockb)  
-- [`APPS/hatchy-privacy-ai/bun.lockb`](APPS/hatchy-privacy-ai/bun.lockb)  
-These are large/binary — don't edit directly.
+**Setup steps:**
+1. Flash **Raspberry Pi OS (64-bit)** or **Ubuntu Server** on the SD card using [Raspberry Pi Imager](https://www.raspberrypi.com/software/).
+2. Insert the SD card, connect the display, and power on the Pi.
+3. Connect via Ethernet (preferred) or Wi-Fi.
+4. Run updates:
+   ```bash
+   sudo apt update && sudo apt upgrade -y
+   ```
 
-## Useful scripts & guides
-- Full PWA local HTTPS setup: [`FULL_PWA_LOCALHOST_SETUP.md`](FULL_PWA_LOCALHOST_SETUP.md)  
-- Final acceptance / certificate guide: [`FINAL_SETUP_INSTRUCTIONS.txt`](FINAL_SETUP_INSTRUCTIONS.txt)  
-- Messaging app quick run: expo + tunnels covered in [`APPS/MessagingApp/PUBLIC_URL_SETUP.txt`](APPS/MessagingApp/PUBLIC_URL_SETUP.txt)
+5. Enable required interfaces:
 
-## Notable code symbols & where to look
-- `FirewallEngine.initialize` — referenced in [`APPS/HatchWall/README.md`](APPS/HatchWall/README.md) (implementation in `APPS/HatchWall/services/FirewallEngine.js` per docs)  
-- `AIDetectionService.analyzeUrl` — referenced in [`APPS/HatchWall/README.md`](APPS/HatchWall/README.md) (service file in `APPS/HatchWall/services/AIDetectionService.js`)  
-- `ChatScreen` component — [`APPS/MessagingApp/src/screens/ChatScreen.js`](APPS/MessagingApp/src/screens/ChatScreen.js)
+   ```bash
+   sudo raspi-config
+   ```
 
-## Quick recommendations (practical)
-- Create a single root README (this file) and link into the many per-app READMEs (done). See: [`APPS_OVERVIEW.md`](APPS_OVERVIEW.md)  
-- For Messaging: produce a Dev Build (see [`APPS/MessagingApp/ANDROID_FIX_README.md`](APPS/MessagingApp/ANDROID_FIX_README.md)) to avoid Expo Go permission issues.  
-- Keep backups of bun.lockb files; treat them as binary artifacts.  
-- Use `server.py` and follow [`FULL_PWA_LOCALHOST_SETUP.md`](FULL_PWA_LOCALHOST_SETUP.md) for HTTPS local testing.
+   * Go to *Interface Options*
+   * Enable **Camera**, **SSH**, and **I2C**
 
-## Where to start right now
-1. Start backend: [`server.py`](server.py)  
-2. Open overview: [`APPS_OVERVIEW.md`](APPS_OVERVIEW.md)  
-3. For Messaging dev work: [`APPS/MessagingApp/BUILD_INSTRUCTIONS.md`](APPS/MessagingApp/BUILD_INSTRUCTIONS.md) and [`APPS/MessagingApp/ANDROID_FIX_README.md`](APPS/MessagingApp/ANDROID_FIX_README.md)
+6. Reboot once setup is complete:
+
+   ```bash
+   sudo reboot
+   ```
 
 ---
 
-Need a fully expanded, opinionated, "insanely detailed" README with section-by-section deep dives for each app (code pointers, TODOs, commands)? I can generate that file next — tell me which app to deep-dive first.
+### 2. Router Setup (Turning Off DHCP)
+
+If you are using a **custom ASUS NUC router** or similar, disable DHCP to allow static IP assignments by the Pi:
+
+1. Open your router’s web panel (usually `192.168.1.1` or `192.168.0.1`).
+2. Log in using the admin credentials.
+3. Go to **LAN Settings → DHCP Server**.
+4. Turn **DHCP Server** → **OFF**.
+5. Assign a static IP to your Raspberry Pi manually:
+
+   ```bash
+   sudo nano /etc/dhcpcd.conf
+   ```
+
+   Add at the end:
+
+   ```
+   interface eth0
+   static ip_address=192.168.1.20/24
+   static routers=192.168.1.1
+   static domain_name_servers=8.8.8.8 8.8.4.4
+   ```
+6. Save and reboot the Pi.
+
+---
+
+## Key apps (quick links)
+
+* **Messaging App (Expo, PWA, native build helpers)**
+
+  * Android fix notes: [`APPS/MessagingApp/ANDROID_FIX_README.md`](APPS/MessagingApp/ANDROID_FIX_README.md)
+  * Build instructions: [`APPS/MessagingApp/BUILD_INSTRUCTIONS.md`](APPS/MessagingApp/BUILD_INSTRUCTIONS.md)
+  * Studio build script: [`APPS/MessagingApp/BUILD-WITH-STUDIO.bat`](APPS/MessagingApp/BUILD-WITH-STUDIO.bat)
+  * Web build script: [`APPS/MessagingApp/BUILD-WEB-APP.bat`](APPS/MessagingApp/BUILD-WEB-APP.bat)
+  * PWA docs: [`APPS/MessagingApp/PWA_README.md`](APPS/MessagingApp/PWA_README.md)
+  * Public/tunnel notes: [`APPS/MessagingApp/PUBLIC_URL_SETUP.txt`](APPS/MessagingApp/PUBLIC_URL_SETUP.txt)
+  * Chat screen: [`APPS/MessagingApp/src/screens/ChatScreen.js`](APPS/MessagingApp/src/screens/ChatScreen.js)
+
+* **Hatch Wall (on-device firewall / AI detection)**
+
+  * Docs: [`APPS/HatchWall/README.md`](APPS/HatchWall/README.md)
+  * Implementation summary: [`HATCH_WALL_COMPLETE.md`](HATCH_WALL_COMPLETE.md)
+  * Quickstart: [`HATCH_WALL_QUICKSTART.md`](HATCH_WALL_QUICKSTART.md)
+  * Admin dashboard: [`admin/dashboard.js`](admin/dashboard.js), [`admin/hatch-wall.html`](admin/hatch-wall.html)
+
+* **HatchOS Core / MyClass / Other Apps**
+
+  * Core: [`APPS/HatchOSCore/README.md`](APPS/HatchOSCore/README.md)
+  * MyClass: [`APPS/MyClass/src/screens/HatchyScreen.js`](APPS/MyClass/src/screens/HatchyScreen.js), [`APPS/MyClass/seed_myclass.py`](APPS/MyClass/seed_myclass.py)
+  * Shine Insight (web): [`APPS/hatch-shine-insight/src/pages/Index.tsx`](APPS/hatch-shine-insight/src/pages/Index.tsx)
+
+---
+
+## Running Apps (Development Setup)
+
+1. Navigate into the app folder:
+
+   ```bash
+   cd APPS/MessagingApp
+   ```
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+3. Run the app in development mode:
+
+   ```bash
+   npm run dev
+   ```
+
+   or for React Native apps using Expo:
+
+   ```bash
+   npx expo start
+   ```
+4. For PWA builds:
+
+   ```bash
+   npm run build
+   ```
+
+   The output will be in the `/dist` or `/build` directory.
+
+---
+
+## Building APK (Expo)
+
+If you want to convert any React Native or Expo app into an APK:
+
+```bash
+npx expo build:android
+```
+
+To create a local dev build:
+
+```bash
+eas build -p android --profile development
+```
+
+After building, install the APK on your device via ADB:
+
+```bash
+adb install your_app.apk
+```
+
+---
+
+## Lockfiles / binary blobs
+
+* [`APPS/hatchy-web-guard/bun.lockb`](APPS/hatchy-web-guard/bun.lockb)
+* [`APPS/hatch-shine-insight/bun.lockb`](APPS/hatch-shine-insight/bun.lockb)
+* [`APPS/hatch-smart-cal/bun.lockb`](APPS/hatch-smart-cal/bun.lockb)
+* [`APPS/hatchy-privacy-ai/bun.lockb`](APPS/hatchy-privacy-ai/bun.lockb)
+  Do **not edit directly**. These files store package versions for reproducible builds.
+
+---
+
+## Useful scripts & guides
+
+* HTTPS setup for PWAs: [`FULL_PWA_LOCALHOST_SETUP.md`](FULL_PWA_LOCALHOST_SETUP.md)
+* Final setup & certificates: [`FINAL_SETUP_INSTRUCTIONS.txt`](FINAL_SETUP_INSTRUCTIONS.txt)
+* Messaging quick run guide: [`APPS/MessagingApp/PUBLIC_URL_SETUP.txt`](APPS/MessagingApp/PUBLIC_URL_SETUP.txt)
+
+---
+
+## Where to start
+
+1. Start backend → [`server.py`](server.py)
+2. Open app overview → [`APPS_OVERVIEW.md`](APPS_OVERVIEW.md)
+3. For Messaging app → follow [`APPS/MessagingApp/BUILD_INSTRUCTIONS.md`](APPS/MessagingApp/BUILD_INSTRUCTIONS.md)
+
 ---
