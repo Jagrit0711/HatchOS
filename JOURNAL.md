@@ -24,3 +24,18 @@ We showcased Hatch OS at a local hackathon, and the response was overwhelmingly 
 ![IMG_20251026_143816863](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6Njc3NCwicHVyIjoiYmxvYl9pZCJ9fQ==--d62024d3c4f2d0bf56f0314dde9f38075605ca4f/IMG_20251026_143816863.jpg)
 pe of the Hatch ecosystem.  
 
+## 10/31/2025 9 PM - working on feedback, adding rfid, ai camera and added apps   
+
+Thank you for the feedback. To increase hardware complexity, we are integrating multiple new modules into the system. An AI-based camera system is being added for automated daily attendance recognition using facial detection and recognition models.
+
+In addition, we are developing a custom-built central server router capable of managing and wirelessly debugging over 100 connected devices simultaneously. Unlike a generic router, this unit will be designed from scratch with custom firmware, optimized network management protocols, and dedicated hardware interfaces to enable seamless device communication, centralized control, and real-time data synchronization between nodes.
+
+On the software side, we have also developed a suite of essential productivity applications, including a browser, notes, calendar, and five additional system apps, all integrated with a centralized admin dashboard for unified management, user tracking, and data analytics.
+
+We are also exploring the addition of RFID-based stickers on each device to enable battery-independent login and identification. A custom-built RFID reader module, designed using NodeMCU, will facilitate this functionality, ensuring device access and attendance logging even when power or connectivity is unavailable.
+
+These enhancements collectively elevate both the hardware and system integration complexity of the project, advancing it far beyond a purely code-focused implementation.
+![RFID RC522 NodeMCU Interface(0)](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NzAyMywicHVyIjoiYmxvYl9pZCJ9fQ==--5952cd981bc1342822eae1239caf8941deaba98a/RFID%20RC522%20NodeMCU%20Interface(0).png)
+![Screenshot 2025-10-31 214002](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NzAyNCwicHVyIjoiYmxvYl9pZCJ9fQ==--377dff8383d26a67f92aa512f211897791864f86/Screenshot%202025-10-31%20214002.png)
+  
+
