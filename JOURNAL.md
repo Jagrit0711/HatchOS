@@ -39,3 +39,12 @@ These enhancements collectively elevate both the hardware and system integration
 ![Screenshot 2025-10-31 214002](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NzAyNCwicHVyIjoiYmxvYl9pZCJ9fQ==--377dff8383d26a67f92aa512f211897791864f86/Screenshot%202025-10-31%20214002.png)
   
 
+## 11/1/2025 - Custom 3D Printed Case  
+
+After a full night of brainstorming, sketching, and arguing over every small detail, we finally decided to design our own custom 3D printed case for the hardware. The main goal was to make something that actually fits everything properly instead of forcing it into a random Pi 4 case.
+We started by measuring every component the Pi 5 board, fan, screen mount, and ports then modeled it all in Fusion 360. The first few versions looked rough, but once we added proper vents and screw mounts, it started to feel solid. The vibe that night was perfect music playing, everyone half tired but focused, debating colors and finishes.
+By morning, the final model was ready to print. We chose a matte black base with a transparent top so the LEDs could glow through. The print took almost six hours, and watching it build up layer by layer felt incredibly satisfying.
+Now the hardware finally looks complete. It’s no longer just a bunch of parts it feels like something real we built together.
+![Screenshot 2025-11-01 102011](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NzMyMSwicHVyIjoiYmxvYl9pZCJ9fQ==--351b707dd4fbebb20b2b69601818bccb48ab790c/Screenshot%202025-11-01%20102011.png)
+  
+
